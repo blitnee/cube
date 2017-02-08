@@ -18,7 +18,7 @@
   position: absolute;
   width: 300px;
   height: 300px;
-  box-sizing: border-box;`
+  box-sizing: border-box;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   padding: 120px 0;
@@ -80,20 +80,24 @@
   transform: translateZ(150px);
 }
 .right {
-  transform: rotateY(90deg) translateZ(150px);
+  transform: translateX(150px) rotateY(90deg);
 }
 .left{
-  transform: rotateY(90deg) translateZ(-150px);
+  transform: translateX(-150px) rotateY(-90deg);
 }
 
 @keyframes rotation {
-  0% { transform: translateZ(-150px) rotateX(0deg); }
-    15% { transform: translateZ(-150px) rotateX(90deg); }
-    25% { transform: translateZ(-150px) rotateX(90deg); }
-    40% { transform: translateZ(-150px) rotateX(180deg); }
-    50% { transform: translateZ(-150px) rotateX(180deg); }
-    65% { transform: translateZ(-150px) rotateX(270deg); }
-    75% { transform: translateZ(-150px) rotateX(270deg); }
-    90% { transform: translateZ(-150px) rotateX(360deg); }
-    100% { transform: translateZ(-150px) rotateX(360deg); }
+  0% { transform: translateZ(-150px) rotateX(0deg)} /*front*/
+    8% { transform: translateZ(-150px) rotateY(90deg); } /*left*/
+    16% { transform: translateZ(-150px) rotateY(90deg); }
+    24% { transform: translateZ(-150px) rotateX(270deg); }/*top*/
+    32% { transform: translateZ(-150px) rotateX(270deg); }
+    40% { transform: translateZ(-150px) rotateX(180deg); }/*back*/
+    48% { transform: translateZ(-150px) rotateX(180deg); }
+    56% { transform: translateZ(-150px) rotateX(90deg); }/*bottom*/
+    64% { transform: translateZ(-150px) rotateX(90deg); }
+    72% { transform: translateZ(-150px) rotateY(-90deg); } /*right*/
+    80% { transform: translateZ(-150px) rotateY(-90deg); }
+    88% { transform: translateZ(-150px) rotateX(0deg)} /*front*/
+    100% { transform: translateZ(-150px) rotateX(0deg)}
 }
